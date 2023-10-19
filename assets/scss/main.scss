@@ -1,0 +1,11 @@
+body{
+    font-family: $main_font;
+    background-color: var(--pure_white);
+    color: var(--grey);
+    h1,h2,h3,h4,h5,h6{
+        color: var(--darker_color);
+    }
+    p,span,small{
+        color: var(--grey);
+    }
+}

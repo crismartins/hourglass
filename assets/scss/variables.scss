@@ -1,0 +1,55 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,200;1,400;1,500&display=swap');
+$main_font:'Poppins', sans-serif;
+
+//font sizes
+$size_4px: 0.25rem;
+$size_8px: 0.5rem;
+$size_12px: 0.75rem;
+$size_14px: 0.875rem;
+$size_16px: 1rem;
+$size_18px: 1.12rem;
+$size_20px: 1.25rem;
+$size_24px: 1.5rem;
+$size_28px: 1.75rem;
+$size_32px: 2rem;
+$size_36px: 2.25rem;
+$size_40px: 2.5rem;
+$size_44px: 2.75rem;
+$size_48px: 3rem;
+$size_52px: 3.25rem;
+$size_56px: 3.5rem;
+$size_60px: 3.75rem;
+$size_64px: 4rem;
+$size_68px: 4.25rem;
+$size_72px: 4.5rem;
+$size_76px: 4.75rem;
+$size_80px: 5rem;
+
+//colors
+html{
+    --darker_color:#150F1F;
+    --pure_white:#ffffff;
+    --lighter_color:#F3F3FF;
+    --grey:#56607B;
+    --light_grey:#B5C3F6;
+    --blue:#262FFD;
+    --light_blue:#0989FF;
+    --green:#00E577;
+    --light_green:#00E5CA33;
+    --yellow:#FFB60E;
+    --red:#FF114A;
+    --border_color:#D9DDFC;
+    --main_gradient:linear-gradient(334deg, var(--blue) 2.32%, var(--light_blue) 92.82%);
+}
+
+//responsive breakpoints
+$br_smaller: 320px;
+$br_mobile: 640px;
+$br_tablet: 820px;
+$br_desktop: 1280px;
+$br_desktop_lg: 1440px;
+
+//default styles
+$border_default:1px solid var(--border_color);
+$transition_default: all 0.4s ease;
