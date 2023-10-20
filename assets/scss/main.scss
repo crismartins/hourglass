@@ -1,11 +1,34 @@
 body{
+    padding: 0;
+    margin: 0;
     font-family: $main_font;
     background-color: var(--pure_white);
     color: var(--grey);
+    font-size: $size_16px;
     h1,h2,h3,h4,h5,h6{
         color: var(--darker_color);
     }
     p,span,small{
         color: var(--grey);
+    }
+    ul,ol{
+        list-style: none;
+        padding: unset;
+    }
+    a{
+        text-decoration: none;
+        transition: $transition_default;
+    }
+    strong{
+        font-weight: 600;
+    }
+    *{
+        box-sizing: border-box;
+    }
+
+    //accessibility
+    .visually-hidden {
+        position: absolute;
+        opacity: 0;
     }
 }

@@ -33,14 +33,15 @@ html{
     --lighter_color:#F3F3FF;
     --grey:#56607B;
     --light_grey:#B5C3F6;
-    --blue:#262FFD;
+    --lighter_grey:#D9DDFC;
+    --blue:#0066FF;
     --light_blue:#0989FF;
+    --dark_blue:#262FFD;
     --green:#00E577;
     --light_green:#00E5CA33;
     --yellow:#FFB60E;
     --red:#FF114A;
-    --border_color:#D9DDFC;
-    --main_gradient:linear-gradient(334deg, var(--blue) 2.32%, var(--light_blue) 92.82%);
+    --main_gradient:linear-gradient(334deg, var(--dark_blue) 2.32%, var(--light_blue) 92.82%);
 }
 
 //responsive breakpoints
@@ -51,5 +52,5 @@ $br_desktop: 1280px;
 $br_desktop_lg: 1440px;
 
 //default styles
-$border_default:1px solid var(--border_color);
+$border_default:1px solid var(--lighter_grey);
 $transition_default: all 0.4s ease;
