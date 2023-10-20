@@ -5,6 +5,10 @@ body{
     background-color: var(--pure_white);
     color: var(--grey);
     font-size: $size_16px;
+    *{
+        box-sizing: border-box;
+        font-family: $main_font;
+    }
     h1,h2,h3,h4,h5,h6{
         color: var(--darker_color);
     }
@@ -14,16 +18,14 @@ body{
     ul,ol{
         list-style: none;
         padding: unset;
+        margin: unset;
     }
     a{
         text-decoration: none;
         transition: $transition_default;
     }
     strong{
-        font-weight: 600;
-    }
-    *{
-        box-sizing: border-box;
+        font-weight: 500;
     }
 
     //accessibility
