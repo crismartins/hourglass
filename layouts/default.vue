@@ -4,7 +4,9 @@
 
         <main class="app__container__main">
             <TheHeader />
-            <slot/>
+            <div class="app__container__main__page">
+                <slot/>
+            </div>
         </main>
     </div>
 </template>
@@ -19,5 +21,14 @@
     max-height: 100dvh;
     display: grid;
     grid-template-columns: 240px 1fr;
+    &__main{
+        max-height: 100vh;
+        max-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        &__page{
+            padding: 28px 40px;
+        }
+    }
 }
 </style>

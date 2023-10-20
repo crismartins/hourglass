@@ -75,15 +75,21 @@ const menuItems = ref([
         display: flex;
         align-items: center;
         gap: 12px;
+        padding-block: 8px;
         &__avatar{
             display: grid;
             place-items: center;
             flex-shrink: 0;
+            width: 44px;
+            aspect-ratio: 1;
+            border-radius: 12px;
+            border: 2px solid var(--pure_white);
+            overflow: hidden;
+            background-color: var(--pure_white);
             img{
-                width: 44px;
-                aspect-ratio: 1;
-                border-radius: 12px;
-                border: 2px solid var(--pure_white);
+                object-fit: cover;
+                min-width: 100%;
+                min-height: 100%;
             }
         }
         &__user{
@@ -137,6 +143,7 @@ const menuItems = ref([
     }
     &__footer{
         text-align: center;
+        padding: 12px;
         &__logo{
             display: flex;
             gap: 4px;
