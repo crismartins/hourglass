@@ -21,5 +21,8 @@ export default defineNuxtConfig({
         }
     }
   },
+  modules: [
+    'nuxt-icon',
+  ],
   devtools: { enabled: true }
 })
