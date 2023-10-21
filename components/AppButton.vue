@@ -52,6 +52,7 @@ const { hasLink } = toRefs(props)
         background-color: var(--green);
         color: var(--pure_white);
         gap: 12px;
+        position: relative;
         &:hover{
             color: var(--darker_color);
         }
@@ -65,21 +66,30 @@ const { hasLink } = toRefs(props)
             box-shadow: 0 0 0 4px;
             color: var(--lighter_grey);
             transition: $transition_default;
+            opacity: 0;
         }
         i{
             font-size: $size_24px;
+            transition: rotate 0.8s ease 0.4s, left 0.4s ease;
+            position: absolute;
+            left:12px;
         }
         &.active{
             background-color: var(--pure_white);
             color: var(--grey);
+            padding-right: 44px;
             &:before{
                 background-color: var(--green);
                 animation: 2s pulseShadows ease infinite;
                 color: var(--light_green);
+                opacity: 1;
+            }
+            &:hover{
+                color: var(--darker_color);
             }
             i{
                 rotate: 180deg;
-                animation: 2s takeBreak ease;
+                left: calc(100% - 36px);
             }
         }
     }
@@ -112,16 +122,5 @@ const { hasLink } = toRefs(props)
         box-shadow: 0 0 0 4px;
     }
 }
-@keyframes takeBreak{
-    
-    20%{
-        transform: rotate(180deg);
-    }
-    90%{
-        transform: translateX(-120px) rotate(180deg);
-    }
-    100%{
-        opacity: 0;
-    }
-}
+
 </style>
