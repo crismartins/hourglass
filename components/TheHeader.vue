@@ -11,12 +11,16 @@
                             Tracking
                         </strong>
                         <strong class="header__right__tracking__time__info__time">
-                            time
+                            <NuxtTime :datetime="timeTracked" second="numeric" hour="numeric" minute="numeric" />
                         </strong>
                     </span>
                 </div>
-                <AppButton class="register">
-                    Take a break
+                <AppButton 
+                    class="register" 
+                    :class="{ active : trackingTime }"
+                    @click="toggleTracking"
+                >
+                    {{ trackingTime ? 'Take a Break' : 'Start Working'}}
                     <AppIcon IconName="tabler:arrow-right" />
                 </AppButton>
             </div>
@@ -37,6 +41,14 @@ const companyData = ref({
     name: 'Company',
     schedule: 'from 8h to 5h'
 })
+
+const trackingTime = ref(false)
+
+const timeTracked = ref(new Date())
+
+function toggleTracking(){
+    trackingTime.value = !trackingTime.value
+}
 </script>
 
 <style lang="scss" scoped>
@@ -76,7 +88,14 @@ const companyData = ref({
             }
         }
         &__theme{
-
+            &__switcher{
+                background-color: var(--darker_color);
+                border-radius: 12px;
+                padding: 12px;
+                width: 44px;
+                aspect-ratio: 1;
+                color: var(--lighter_color);
+            }
         }
     }
 }
