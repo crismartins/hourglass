@@ -11,6 +11,12 @@ body{
     }
     h1,h2,h3,h4,h5,h6{
         color: var(--darker_color);
+        margin: 0;
+        &.primary-title{
+            gap: 12px;
+            font-weight: 300;
+            font-size: $size_32px;
+        }
     }
     p,span,small{
         color: var(--grey);
