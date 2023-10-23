@@ -130,7 +130,8 @@ function toggleOptions(){
                 a{
                     display: flex;
                     padding: 12px;
-                    gap: 8px;
+                    font-size: $size_14px;
+                    gap: 12px;
                     align-items: center;
                     color: var(--darker_color);
                     i{

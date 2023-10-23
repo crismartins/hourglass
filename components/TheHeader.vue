@@ -11,7 +11,7 @@
                             Tracking
                         </strong>
                         <strong class="header__right__tracking__time__info__time">
-                            <NuxtTime :datetime="timeTracked" second="numeric" hour="numeric" minute="numeric" />
+                            {{ timeFormated() }}
                         </strong>
                     </span>
                 </div>
@@ -44,11 +44,38 @@ const companyData = ref({
 
 const trackingTime = ref(false)
 
-const timeTracked = ref(new Date())
+const timeTracked = reactive({
+    hours: 0,
+    min: 0,
+    sec: 0
+})
+
+const t = setInterval(() => {
+    if(trackingTime.value){
+        timeTracked.sec++
+        if(timeTracked.sec == 61){
+            timeTracked.min++
+            timeTracked.sec = 1
+            if(timeTracked.min == 61){
+                timeTracked.hours++
+                timeTracked.min = 1
+            }
+        }
+    }
+}, 1000);
+    
+function timeFormated(){
+    let hours = String(timeTracked.hours).padStart(2, '0')
+    let minutes = String(timeTracked.min).padStart(2, '0')
+    let seconds = String(timeTracked.sec).padStart(2, '0')
+    const time = `${hours} : ${minutes} : ${seconds}`
+    return time
+}
 
 function toggleTracking(){
     trackingTime.value = !trackingTime.value
 }
+
 </script>
 
 <style lang="scss" scoped>
