@@ -16,6 +16,7 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "moment": "^2.29.4",
     "nuxt-icon": "^0.5.0",
     "nuxt-time": "^0.1.1"
   }
