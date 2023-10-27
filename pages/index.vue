@@ -5,39 +5,13 @@
             Good Afternoon Cristopher, It’s time to work!
         </h1>
         <div class="dashboard__data">
-            <div class="dashboard__data__today">
-                <h2>
-                    Today
-                </h2>
-                <div>
-                    <strong>
-                        <NuxtTime :datetime="new Date()" hour="numeric" minute="numeric" second="numeric" />
-                    </strong>
-                </div>
+            <DashboardToday />
+            <div class="dashboard__data__statuses">
+                <DashboardWorkedHours />
+                <DashboardEarnings />
             </div>
             <div class="dashboard__data__records">
-                <div class="dashboard__data__records__worked">
-                    <header class="dashboard__data__records__worked__header">
-                        <h2>
-                            Worked Hours
-                        </h2>
-                        <span>
-                            date
-                        </span>
-                    </header>
-                    <div class="dashboard__data__records__worked__body">
-                        <ul>
-                            <li>
-                                <h3>
-                                    Absense
-                                </h3>
-                                <strong>
-                                    0:00
-                                </strong>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <DashboardHistory />
             </div>
         </div>
     </div>
@@ -56,6 +30,19 @@
         i{
             display: inline-block;
             color: var(--light_grey);
+        }
+    }
+    &__data{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        &__statuses{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        &__records{
+            grid-column: 1/ span 2;
         }
     }
 }
