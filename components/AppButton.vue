@@ -101,8 +101,16 @@ const { hasLink } = toRefs(props)
             font-size: $size_20px;
         }
     }
+    &.link{
+        background-color: transparent;
+        color: var(--blue);
+        padding: 0;
+        font-size: 20px;
+    }
     &.small{
         font-size: $size_14px;
+        padding: 4px 12px;
+        min-height: 32px;
     }
     &.clean{
         padding: 0;

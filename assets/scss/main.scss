@@ -12,10 +12,22 @@ body{
     h1,h2,h3,h4,h5,h6{
         color: var(--darker_color);
         margin: 0;
+        font-weight: 500;
         &.primary-title{
             gap: 12px;
             font-weight: 300;
             font-size: $size_32px;
+        }
+        &.secondary-title{
+            font-size: $size_20px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        &.tertiary-title{
+            font-size: $size_14px;
+            margin-bottom: 12px;
+            font-weight: 500;
+            color: var(--grey);
         }
     }
     p,span,small{

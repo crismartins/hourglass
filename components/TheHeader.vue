@@ -98,6 +98,7 @@ function toggleTracking(){
                 display: flex;
                 gap: 8px;
                 align-items: center;
+                min-width: 140px;
                 i{
                     font-size: $size_36px;
                     color: var(--light_grey);
